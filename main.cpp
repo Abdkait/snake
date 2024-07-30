@@ -111,12 +111,13 @@ void Logic(){
     }
 }
 
-int main(){
+int main() {
     srand(time(0));
     Setup();
-    while(!gameOver){
+    while (!gameOver) {
         Draw();
         Input();
         Logic();
         std::this_thread::sleep_for(std::chrono::milliseconds(300 / difficult));
     }
+}
